@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&family=Kanit:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../imagenes/Logooscuro.png" type="image/png" />
+    <title>Detalle del Producto</title>
+    <!-- Enlaza tu archivo CSS aquí -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/detalle-producto.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/ae1d842f3c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Bloque de header -->
+    <header class="headerDetail">
+      <div class="logo-section">
+        <a href="../index.html"
+          ><img src="../imagenes/Logooscuro.png" alt="Logo de la empresa"
+        /></a>
+        <p>El mejor aliado de tus proyectos</p>
+      </div>
+
+      <div class="btn-section">
+        <a href="./signup.html">
+          <button>Crear cuenta</button>
+        </a>
+        <a href="./login.html">
+          <button>Iniciar sesión</button>
+        </a>
+
+        <!-- Favoritos -->
+
+        <div class="menu-header">
+          <button id="button-header-favorite">
+            <i class="fa-solid fa-heart"></i>
+            <span class="counter-favorite">0</span>
+          </button>
+          <button>
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="counter-cart">0</span>
+          </button>
+        </div>
+
+        <div class="container-list-favorites">
+          <div class="header-favorite">
+            <h3>Mis Favoritos</h3>
+            <i class="fa-solid fa-xmark" id="btn-close"></i>
+          </div>
+          <hr />
+          <div class="list-favorites">
+            <div class="card-favorite">
+              <p class="title">Audífonos Bluetooth Pro</p>
+              <p>$150</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="user-info">
+        <div class="admin-section">
+          <a href="../admin/administracion.html" style="text-decoration: none">
+            <button>Ir al Dashboard</button>
+          </a>
+        </div>
+        <button class="avatar" id="user-details-button">
+          <text class="iniciales"></text>
+        </button>
+        <button id="logout">Cerrar sesion</button>
+        <div class="infoUser"></div>
+      </div>
+    </header>
+
+    <!-- Contenido del detalle del producto -->
+    <main>
+      <div class="back-arrow"></div>
+
+      <!-- <button id="btnFecha" onclick="openModal()" >Detalles de Reserva</button> -->
+
+      <div class="card-container">
+        <section id="detalle-producto">
+          <div class="content-card-product" data-product-id="1"></div>
+        </section>
+        <div class="container">
+          <div class="rating">
+            <input type="radio" name="clr1" style="--c: #ff9933" />
+            <input type="radio" name="clr1" style="--c: #ff9933" />
+            <input type="radio" name="clr1" style="--c: #ff9933" />
+            <input type="radio" name="clr1" style="--c: #ff9933" />
+            <input type="radio" name="clr1" style="--c: #ff9933" />
+          </div>
+          <div class="container-buttons-card">
+            <button class="favorite">
+              <i class="fa-regular fa-heart" id="favorite-regular"></i>
+              <i class="fa-solid fa-heart" id="added-favorite"></i>
+            </button>
+            <button class="cart">
+              <i class="fa-solid fa-bag-shopping"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="caracteristicas" class="caracteristicas">
+        <h2>Caracteristicas</h2>
+        <ul id="caracteristica-producto"></ul>
+      </div>
+      <div class="BtnContenedor">
+        <p class="BtnCompartir">
+          Compartir<i class="fa-solid fa-share-alt"></i>
+        </p>
+        <br />
+        <br />
+        <a href="./politicas_productos.html" class="BtnCompartir">Politicas</a>
+        <br />
+        <br />
+        <!-- Botón de WhatsApp -->
+        <a
+          href="https://wa.me/1130871978"
+          class="whatsapp-button"
+          target="_blank"
+          >Contactar por WhatsApp</a
+        >
+      </div>
+
+      <h1 id="selectedDates" class="reserva-title">Reservar</h1>
+      <div class="calendario">
+        <input type="text" name="daterange" id="calendarioId" />
+      </div>
+
+      <!-- Pop-up -->
+      <div id="popup" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Detalles de la Reserva</h2>
+          <label for="nombre-producto">Producto:</label>
+            <input
+              type="text"
+              id="nombre-producto"
+              disabled
+            />
+          <label for="descripcion-producto">Descripcion:</label>
+            <!--<input
+              type="text"
+              id="descripcion-producto"
+              disabled
+            />-->
+            <textarea id="descripcion-producto" name="descripcion-producto" rows="3" cols="33" disabled></textarea>
+          <label for="imagen-producto">Imagen:</label>
+            <div id="contenedor-imagen"></div>
+
+          <p>Fecha de Inicio: <span id="fecha-inicio"></span></p>
+          <p>Fecha de Fin: <span id="fecha-fin"></span></p>
+          <!-- Formulario de reserva -->
+            <label for="fname">Nombre:</label>
+            <input
+              type="text"
+              id="fname"
+              disabled
+            />
+
+            <label for="lname">Apellido:</label>
+            <input
+              type="text"
+              id="lname"
+              disabled
+            />
+
+            <label for="email">Correo Electrónico:</label>
+            <input
+              type="email"
+              id="email"
+              disabled
+            />
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios" rows="3" cols="33" placeholder="Coloca tus comentarios"></textarea>
+              
+            <button id="confirmarReservaBtn">Confirmar reserva</button>
+          <div id="reservation-message" style="display: none"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Incluye tu pie de página (footer) aquí -->
+    <footer>
+      <div class="footer-logo">
+        <img src="../imagenes/Logooscuro.png" alt="Isologotipo de la empresa" />
+        <p>Todos los derechos reservados &copy;</p>
+      </div>
+      <div class="social">
+        <a href="http://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://twitter.com/?lang=es"
+          ><i class="fa-brands fa-x-twitter"></i
+        ></a>
+      </div>
+    </footer>
+
+    <!-- Inluye tu archivo JavaScript aquí -->
+    <script
+      type="module"
+      src="../scripts/productos/validacionUsuarioLoggeadoReserva.js"
+    ></script>
+    <script
+      type="module"
+      src="../scripts/productos/getProductoPorId.js"
+    ></script>
+    <script type="module" src="../scripts/usuarios/auth.js"></script>
+    <script
+      type="module"
+      src="../scripts/usuarios/renderUserInitials.js"
+    ></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap JS (o cualquier otra biblioteca que proporcione modales) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/productos/agregarFavoritos.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+  </body>
+</html>

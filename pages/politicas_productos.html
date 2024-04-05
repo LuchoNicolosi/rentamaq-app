@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&family=Kanit:wght@100;300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="../imagenes/Logooscuro.png" type="image/png" />
+  <title>Detalle del Producto</title>
+  <!-- Enlaza tu archivo CSS aquí -->
+  <link rel="stylesheet" href="../styles/styles.css" />
+  <link rel="stylesheet" href="../styles/detalle-producto.css" />
+  <link rel="stylesheet" href="../styles/politicas-producto.css">
+
+  <script src="https://kit.fontawesome.com/ae1d842f3c.js" crossorigin="anonymous"></script>
+  <!-- Calendario -->
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.0/main.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.0/main.js"></script>
+</head>
+
+<body>
+  <!-- Bloque de header -->
+  <header class="headerDetail">
+    <div class="logo-section">
+      <a href="../index.html"><img src="../imagenes/Logooscuro.png" alt="Logo de la empresa" /></a>
+      <p>El mejor aliado de tus proyectos</p>
+    </div>
+
+    <div class="btn-section">
+      <a href="./signup.html">
+        <button>Crear cuenta</button>
+      </a>
+      <a href="./login.html">
+        <button>Iniciar sesión</button>
+      </a>
+    </div>
+
+    <div class="user-info">
+      <div class="admin-section">
+        <a href="../admin/administracion.html" style="text-decoration: none">
+          <button>Ir al Dashboard</button>
+        </a>
+      </div>
+      <button class="avatar" id="user-details-button">
+        <text class="iniciales"></text>
+      </button>
+      <button id="logout">Cerrar sesion</button>
+      <div class="infoUser"></div>
+    </div>
+  </header>
+
+  <!-- Contenido del detalle del producto -->
+  <main>
+    <div class="politicas">
+      <h2 class="titulo">Políticas de Alquiler de Maquinaria</h2>
+      <div class="politica">
+        <h3 class="subtitulo">Política de Uso</h3>
+        <p>Las máquinas deben ser utilizadas únicamente para fines de construcción. No se permite su uso para actividades no relacionadas con la construcción.</p>
+      </div>
+      <div class="politica">
+        <h3 class="subtitulo">Política de Pago</h3>
+        <p>El pago del alquiler debe realizarse por adelantado. Se aceptan pagos en efectivo, tarjeta de crédito o transferencia bancaria.</p>
+      </div>
+      <div class="politica">
+        <h3 class="subtitulo">Política de Entrega y Devolución</h3>
+        <p>La entrega y devolución de la maquinaria se realizará en el lugar y la fecha acordados. Se aplicarán cargos adicionales por retrasos en la devolución.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Incluye tu pie de página (footer) aquí -->
+  <footer>
+    <div class="footer-logo">
+      <img src="../imagenes/Logooscuro.png" alt="Isologotipo de la empresa" />
+      <p>Todos los derechos reservados &copy;</p>
+    </div>
+    <div class="social">
+      <a href="http://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://twitter.com/?lang=es"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+  </footer>
+
+  <!-- Inluye tu archivo JavaScript aquí -->
+  <script src="../scripts/productos/getProductoPorId.js"></script>
+  <script type="module" src="../scripts/usuarios/auth.js"></script>
+  <script type="module" src="../scripts/usuarios/renderUserInitials.js"></script>
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Bootstrap JS (o cualquier otra biblioteca que proporcione modales) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
