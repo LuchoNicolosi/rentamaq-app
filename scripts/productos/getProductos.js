@@ -1,4 +1,3 @@
-
 window.addEventListener('load', function () {
   function renderizarProductos(productos) {
     const cardsRecomendaciones = document.querySelector('#recomendaciones');
