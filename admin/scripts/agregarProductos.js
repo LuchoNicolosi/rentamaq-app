@@ -3,7 +3,7 @@ window.addEventListener('load', function () {
 
   async function cargarCategorias() {
     try {
-      const apiData = await fetch('https://rentamaq.xyz//categorias');
+      const apiData = await fetch('https://rentamaq.xyz/categorias');
       const apiDataJson = await apiData.json();
       console.log(apiDataJson);
 
@@ -81,7 +81,7 @@ window.addEventListener('load', function () {
     document.getElementById('error-nombre').textContent = '';
     document.getElementById('error-descripcion').textContent = '';
     // Realizar la solicitud AJAX POST al endpoint del controlador
-    fetch('https://rentamaq.xyz//productos/guardar', {
+    fetch('https://rentamaq.xyz/productos/guardar', {
       method: 'POST',
       body: formData,
     })

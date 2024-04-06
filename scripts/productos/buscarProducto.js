@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
 async function buscarProductosPorNombre(nombre) {
     try {
         // Realizar una solicitud al servidor con el término de búsqueda
-        const response = await fetch(`https://rentamaq.xyz//productos/producto/${nombre}`);
+        const response = await fetch(`https://rentamaq.xyz/productos/producto/${nombre}`);
         
         // Verificar si la solicitud fue exitosa
         if (!response.ok) {
@@ -50,7 +50,7 @@ async function buscarProductosPorNombre(nombre) {
 async function buscarProductosPorFecha(fechaInicio, fechaFin) {
     try {
         // Realizar una solicitud al servidor con el término de búsqueda
-        const response = await fetch(`https://rentamaq.xyz//productos/fecha?fechaInicio=${fechaInicio}&fechaFin=${fechaFin}`);
+        const response = await fetch(`https://rentamaq.xyz/productos/fecha?fechaInicio=${fechaInicio}&fechaFin=${fechaFin}`);
         
         // Verificar si la solicitud fue exitosa
         if (!response.ok) {
@@ -73,7 +73,7 @@ async function buscarProductosPorFecha(fechaInicio, fechaFin) {
 async function buscarProductosPorNombreYFecha(nombre, fechaInicio, fechaFin) {
     try {
         // Realizar una solicitud al servidor con el término de búsqueda
-        const response = await fetch(`https://rentamaq.xyz//productos/nombreyfecha?nombre=${nombre}&fechaInicio=${fechaInicio}&fechaFin=${fechaFin}`);
+        const response = await fetch(`https://rentamaq.xyz/productos/nombreyfecha?nombre=${nombre}&fechaInicio=${fechaInicio}&fechaFin=${fechaFin}`);
         
         // Verificar si la solicitud fue exitosa
         if (!response.ok) {

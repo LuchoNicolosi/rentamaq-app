@@ -2,7 +2,7 @@ const productos = [];
 
 const cargarProductos = async() =>{
     try{
-        const apiData = await fetch('https://rentamaq.xyz//productos');
+        const apiData = await fetch('https://rentamaq.xyz/productos');
         const apiDataJson = await apiData.json();
         apiDataJson.sort((a, b) => a.id - b.id);
         console.log(apiDataJson);

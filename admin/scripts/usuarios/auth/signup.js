@@ -48,7 +48,7 @@ window.addEventListener('load', function () {
     };
 
     try {
-      const res = await fetch('https://rentamaq.xyz//user/signup', settings);
+      const res = await fetch('https://rentamaq.xyz/user/signup', settings);
       if (res.status === 201) {
         alert('Usted se ha registrado correctamente, ya es rentamaq!');
         location.replace('../../pages/login.html');

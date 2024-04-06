@@ -2,7 +2,7 @@ const users = [];
 
 const cargarUsuarios = async () => {
   try {
-    const apiData = await fetch('https://rentamaq.xyz//user');
+    const apiData = await fetch('https://rentamaq.xyz/user');
     const apiDataJson = await apiData.json();
     console.log(apiDataJson);
     apiDataJson.forEach((producto) => {

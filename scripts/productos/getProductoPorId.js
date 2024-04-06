@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
 
   async function cargarProductos() {
     try {
-      const res = await fetch('https://rentamaq.xyz//productos');
+      const res = await fetch('https://rentamaq.xyz/productos');
       const productos = await res.json();
       renderizarProductos(productos);
     } catch (error) {
@@ -80,7 +80,7 @@ window.addEventListener('load', function () {
   async function cargarCaracteristicas() {
     try {
       const res = await fetch(
-        `https://rentamaq.xyz//caracteristicas/${prodId}`
+        `https://rentamaq.xyz/caracteristicas/${prodId}`
       );
       const caracteristicas = await res.json();
       console.log('aca', caracteristicas);
@@ -111,7 +111,7 @@ window.addEventListener('load', function () {
   async function cargarCalendario() {
     try {
       const res = await fetch(
-        `https://rentamaq.xyz//reservaciones/producto/${prodId}`
+        `https://rentamaq.xyz/reservaciones/producto/${prodId}`
       );
       const calendario = await res.json();
       // console.log(calendario);
@@ -247,7 +247,7 @@ window.addEventListener('load', function () {
       body: JSON.stringify(data),
     };
 
-    const url = 'https://rentamaq.xyz//reservaciones';
+    const url = 'https://rentamaq.xyz/reservaciones';
 
     fetch(url, requestOptions)
       .then((response) => {
