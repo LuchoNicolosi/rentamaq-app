@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
 
   async function cargarProductosPorCategoria(id) {
     try {
-      const res = await fetch(`http://18.206.95.2/categorias/${id}`);
+      const res = await fetch(`https://rentamaq.xyz//categorias/${id}`);
       const { products } = await res.json();
       renderizarProductos(products);
     } catch (error) {

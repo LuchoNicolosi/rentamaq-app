@@ -18,7 +18,7 @@ window.addEventListener('load', function () {
     };
 
     try {
-      const res = await fetch('http://18.206.95.2/user/login', settings);
+      const res = await fetch('https://rentamaq.xyz//user/login', settings);
       if (res.status === 200) {
         const data = await res.json();
         alert('Inicio de sesión exitoso!');

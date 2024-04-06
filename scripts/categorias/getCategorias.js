@@ -1,6 +1,6 @@
 async function cargarCategorias() {
   try {
-    const res = await fetch('http://18.206.95.2/categorias');
+    const res = await fetch('https://rentamaq.xyz//categorias');
     const categorias = await res.json();
 
     renderizarCategorias(categorias);

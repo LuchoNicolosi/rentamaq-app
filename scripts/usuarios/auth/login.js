@@ -17,7 +17,7 @@ window.addEventListener('load', function () {
     };
 
     try {
-      const res = await fetch('http://18.206.95.2/user/login', settings);
+      const res = await fetch('https://rentamaq.xyz//user/login', settings);
       if (res.status === 200) {
         const data = await res.json();
         alert('Inicio de sesión exitoso!');
@@ -50,7 +50,7 @@ window.addEventListener('load', function () {
   //   };
 
   //   try {
-  //     const res = await fetch('http://18.206.95.2/user/info', settings);
+  //     const res = await fetch('https://rentamaq.xyz//user/info', settings);
   //     if (res.status === 200) {
   //       return await res.json();
   //     } else {
@@ -72,7 +72,7 @@ window.addEventListener('load', function () {
   //   };
 
   //   try {
-  //     const res = await fetch('http://18.206.95.2/user/profile', settings);
+  //     const res = await fetch('https://rentamaq.xyz//user/profile', settings);
   //     if (res.status === 201) {
   //       console.log('Información del usuario guardada correctamente');
   //     } else {

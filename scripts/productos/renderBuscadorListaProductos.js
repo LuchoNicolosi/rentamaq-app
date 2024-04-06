@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', function () {
   searchInput.addEventListener('input', function () {
     const searchTerm = searchInput.value.trim();
     if (searchTerm.length > 0) {
-      fetch(`http://18.206.95.2/productos/producto/${searchTerm}`)
+      fetch(`https://rentamaq.xyz//productos/producto/${searchTerm}`)
         .then(response => {
           if (!response.ok) {
             throw new Error('Error al obtener los datos del servidor');

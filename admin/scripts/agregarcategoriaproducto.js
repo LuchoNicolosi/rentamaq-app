@@ -2,7 +2,7 @@ const productos = [];
 
 const cargarProductos = async() =>{
     try{
-        const apiData = await fetch('http://18.206.95.2/productos');
+        const apiData = await fetch('https://rentamaq.xyz//productos');
         const apiDataJson = await apiData.json();
         console.log(apiDataJson);
     
@@ -21,7 +21,7 @@ const categorias = [];
 
 const cargarCategorias = async() =>{
     try{
-        const apiData = await fetch('http://18.206.95.2/categorias');
+        const apiData = await fetch('https://rentamaq.xyz//categorias');
         const apiDataJson = await apiData.json();
         console.log(apiDataJson);
     
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('Categoria seleccionada:', categoriaSeleccionada);
         
         try {
-            const response = await fetch(`http://18.206.95.2/productos/${productoSeleccionado}/categoria/${categoriaSeleccionada}`, {
+            const response = await fetch(`https://rentamaq.xyz//productos/${productoSeleccionado}/categoria/${categoriaSeleccionada}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
